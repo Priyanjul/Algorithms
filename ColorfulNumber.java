@@ -1,10 +1,10 @@
 //TIME COMPLEXITY : O(N^N)
 //SPACE COMPLEXITY : O(N), dependent on product of all digits of number
 import java.util.*;
-public class Main
+public class ColorfulNumber
 {
     //GET MAX SIZE FOR HASH TABLE (=PRODUCT OF ALL DIGITS IN NUMBER)
-    public int getHashSize(int n){
+    public static int getHashSize(int n){
         int prod=1;
         int r;
         
@@ -21,9 +21,8 @@ public class Main
 		System.out.println("Input :");
 		int n = sc.nextInt();
 		
-		Main ob = new Main();
 		//SIZE OF HASH ARRAY
-		int hashSize = ob.getHashSize(n);
+		int hashSize = getHashSize(n);
 		//BOOLEAN HASH ARRAY
 		boolean hash[] = new boolean[hashSize+1];
 		//LENGTH OF NUMBER
